@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('Images/pexels-neale-lasalle-197020-631477.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 0;
+}
+
+header, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    width: calc(100% - 40px);
+    left: 20px;
+    z-index: 2;
+    background-color: rgba(32, 28, 28, 0);
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav:hover {
+    background-color: rgba(255, 255, 255,0.5);
+}
+
+.transparent-nav {
+    background-color: rgba(32, 28, 28, 0);
+    backdrop-filter: none;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Adjusted to space between items */
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grey-box-hero {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    text-align: left;
+    border-radius: 10px;
+    width: calc(50% - 10px); /* Adjusted width */
+    max-width: 600px; /* Adjusted max-width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.grey-box-hero:last-child {
+    margin-right: 0; /* Remove margin for last item */
+}
+
+@media (max-width: 600px) {
+    .grey-box-hero {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+.grey-box-hero h1,
+.grey-box-hero h2,
+.grey-box-hero p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.image-wrapper {
+    flex: 1; /* Added flex to make it grow */
+    margin-right: 20px;
+    text-align: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.grey-box-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    text-align: left;
+    width: calc(50% - 10px); /* Adjusted width */
+    max-width: 600px; /* Adjusted max-width */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-left: 10px; /* Adjusted margin */
+}
+
+.grey-box-section:first-child {
+    margin-left: 0; /* Remove margin for first item */
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.stat {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.stat h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.scroll-buttons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.scroll-buttons ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.scroll-buttons li {
+    margin-bottom: 10px;
+}
+
+.scroll-buttons a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-buttons a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
